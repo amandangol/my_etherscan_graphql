@@ -49,4 +49,29 @@ Starting the Apollo GraphQL Server:
 
 ## Sample GraphQL Query
 
-Below is a sample GraphQL query to fetch the necessary data from Etherscan
+Below is a sample GraphQL query to fetch the necessary data from Etherscan,
+
+```graphql
+query {
+  etherBalanceByAddress {
+    message
+    result
+  }
+  totalSupplyOfEther {
+    message
+    result
+  }
+  latestEthereumPrice {
+    message
+    result {
+      ethbtc
+      ethusd
+      ethusd_timestamp
+    }
+  }
+  blockConfirmationTime {
+    message
+    result
+  }
+}
+```
